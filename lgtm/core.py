@@ -11,9 +11,7 @@ from lgtm.image_source import get_image
 def cli(keyword, message):
     """LGTM画像生成ツール"""
     lgtm(keyword, message)
-    click.echo('lgtm')  # 動作確認用
-    
-    
+        
 def lgtm(keyword, message):
     with get_image(keyword) as fp:
         save_with_message(fp, message)
