@@ -47,7 +47,7 @@ KeywordImage = _LoremFlickr
 # 単語を大文字始まりにしてクラスのように見せる
 def ImageSource(keyword):
     """最適なイメージソースクラスを返す"""
-    if keyword.startwith(('http://', 'https://')):
+    if keyword.startswith(('http://', 'https://')):
         return RemoteImage(keyword)
     elif Path(keyword).exists():
         return LocalImage(keyword)
