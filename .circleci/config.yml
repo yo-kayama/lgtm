@@ -1,4 +1,4 @@
-version: 2
+version: 
 jobs:
   setup_dependencies:
     docker:
@@ -14,7 +14,6 @@ jobs:
           key: deps-{{ checksum "requirements.lock" }}
           paths:
             - "~/.local"
-
   test:
     docker:
       - image: circleci/python:3.8.1
@@ -26,12 +25,11 @@ jobs:
           command: |
             python -m unittest -v
 
-  workflows:
-    version: 2
-    all:
-      jobs:
-        - setup_dependencies
-        - test:
-            requires:
-              - setup_dependencies
- 
+workflows:
+  version: 2
+  all:
+    jobs:
+      - setup_dependencies
+      - test:
+          requires:
+            - setup_dependencies
