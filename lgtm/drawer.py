@@ -9,7 +9,7 @@ FONT_MAX_SIZE = 256
 FONT_MIN_SIZE = 24
 
 # フォントの格納先パスは実行環境に合わせて変更する
-FONT_NAME = '/Library/Fonts/Arial Bold.ttf'
+FONT_NAME = 'C:\Windows\Fonts\Arial.ttf'
 FONT_COLOR_WHITE = (255, 255, 255, 0)
 
 # アウトプット関連の定数

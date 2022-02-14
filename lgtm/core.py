@@ -6,7 +6,7 @@ from lgtm.image_source import get_image
 
 @click.command()
 @click.option('--message', '-m', default='LGTM',
-              show_default=True, help='画僧に乗せる文字列')
+              show_default=True, help='画像に乗せる文字列')
 @click.argument('keyword')
 def cli(keyword, message):
     """LGTM画像生成ツール"""
